@@ -10,7 +10,7 @@ const randomPhrase: string[] = [
   "I'm working on my Website",
   'I love french fries 🍟',
   'I really like TailwindCSS',
-  "I'm living in Kiel",
+  "I'm live in Kiel, Germany",
   'I started coding in 2021',
 ];
 
@@ -35,16 +35,16 @@ export default function Hero() {
   };
 
   return (
-    <section className="max-w-7xl mx-auto px-6 lg:px-8 min-h-[412px] sm:min-h-[520px]">
-      <div className="flex flex-col items-center ">
-        <article className="w-full min-h-[250px] sm:min-h-[370px] flex flex-col justify-center">
-          <h1 className="tracking-tight text-5xl lg:text-6xl font-extrabold text-white my-1">
+    <section className="max-w-7xl mx-auto px-6 lg:px-8 min-h-[412px] sm:min-h-[500px]">
+      <div className="flex flex-col items-center">
+        <article className="w-full min-h-[250px] sm:min-h-[330px] flex flex-col justify-center">
+          <h1 className="tracking-tight text-5xl lg:text-6xl font-extrabold my-1">
             Hey, I'm <span className="text-yellow-400">Hauke</span>
           </h1>
-          <p className="tracking-tight text-4xl lg:text-6xl font-extrabold text-white my-1">
+          <p className="tracking-tight text-4xl lg:text-6xl font-extrabold my-1">
             an upcoming <span className="text-green-500">Web Developer</span>
           </p>
-          <p className="tracking-tight text-4xl lg:text-6xl font-extrabold text-white my-1">
+          <p className="tracking-tight text-4xl lg:text-6xl font-extrabold my-1">
             and <span className="text-rose-500">{phrase}</span>
           </p>
         </article>

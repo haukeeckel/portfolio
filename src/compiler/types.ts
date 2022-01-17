@@ -1,23 +1,25 @@
 import { ReactNode } from 'react';
 
-export interface DisclosureProps {
-  content: DisclosureElem[];
-  style: DisclosureStyle;
+// Tab Menu
+export interface TabMenuProps {
+  content: TabMenuElem[];
+  style: TabMenuStyle;
 }
 
-export interface DisclosureElem {
+export interface TabMenuElem {
   heading: string | JSX.Element;
   text: string | JSX.Element;
   ariaLable: string;
 }
 
-export interface DisclosureStyle {
+export interface TabMenuStyle {
   headingDefault: string;
   headingActive: string;
   headingInactive: string;
   content: string;
 }
 
+// Button
 export interface ButtonProps {
   color: Color;
   size: Size;
@@ -41,4 +43,19 @@ export enum Weight {
   REGULAR,
   BOLD,
   EXTRABOLD,
+}
+
+// Project
+export interface ProjectProps {
+  project: Project;
+}
+
+export interface Project {
+  title: string;
+  type: string;
+  descrition: string;
+  images: [string, string, string];
+  technologies: string[];
+  deployement: string;
+  repository: string;
 }

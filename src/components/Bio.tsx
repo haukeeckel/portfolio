@@ -1,8 +1,8 @@
 import { PlusCircleIcon } from '@heroicons/react/outline';
-import DisclosureRFC from './DisclosureRFC';
-import { DisclosureElem, DisclosureStyle } from '../compiler/types';
+import TabMenuRFC from './TabMenuRFC';
+import { TabMenuElem, TabMenuStyle } from '../compiler/types';
 
-const aboutSectionContent: DisclosureElem[] = [
+const aboutSectionContent: TabMenuElem[] = [
   {
     heading: <PlusCircleIcon className="h-10 w-10" />,
     text: 'I want to start my career in tech 🚀',
@@ -30,27 +30,26 @@ const aboutSectionContent: DisclosureElem[] = [
   },
 ];
 
-const aboutSectionStyle: DisclosureStyle = {
+const aboutSectionStyle: TabMenuStyle = {
   headingDefault: 'hover:text-yellow-400 px-3',
   headingActive: 'text-rose-500',
   headingInactive: 'text-white',
-  content: 'text-white py-6 text-xl',
+  content: 'py-6 px-6 sm:px-0 text-lg',
 };
 
 export default function Bio() {
   return (
-    <section className="max-w-xl mx-auto px-6 lg:px-8 min-h-[412px] sm:min-h-[520px]">
-      <article className="flex flex-col justify-center items-center text-white">
+    <section className="w-full bg-gray-800 min-h-[412px] sm:min-h-[500px] flex justify-center items-start">
+      <article className="flex flex-col justify-center items-center max-w-xl">
         <h2 className="text-2xl lg:text-4xl font-extrabold my-10 text-center">
           Interested?
           <br /> Read as much as you want
         </h2>
-        <div className="w-[290px] h-fit flex justify-between text-xs mb-2 items-end">
+        <div className="w-[290px] h-fit flex justify-between text-sm leading-4 font-medium text-slate-500 mb-2 items-end">
           <span>short</span>
-          <span className="text-base font-bold">my Bio</span>
           <span>long</span>
         </div>
-        <DisclosureRFC content={aboutSectionContent} style={aboutSectionStyle} />
+        <TabMenuRFC content={aboutSectionContent} style={aboutSectionStyle} />
       </article>
     </section>
   );

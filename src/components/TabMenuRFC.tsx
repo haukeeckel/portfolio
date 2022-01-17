@@ -1,9 +1,9 @@
 import { Fragment } from 'react';
 import { Tab } from '@headlessui/react';
 import { classNames } from '../util/classNames';
-import { DisclosureProps } from '../compiler/types';
+import { TabMenuProps } from '../compiler/types';
 
-export default function DisclosureRFC(props: DisclosureProps) {
+export default function TabMenuRFC(props: TabMenuProps) {
   const { content, style } = props;
 
   return (
