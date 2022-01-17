@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Button from './Button';
+import ButtonRFC from './ButtonRFC';
 
 const randomPhrase: string[] = [
   "I'm ready to take off 🚀",
@@ -9,8 +9,9 @@ const randomPhrase: string[] = [
   "I'm mostly coding",
   "I'm working on my Website",
   'I love french fries 🍟',
-  'I realy like TailwindCSS',
+  'I really like TailwindCSS',
   "I'm living in Kiel",
+  'I started coding in 2021',
 ];
 
 export default function Hero() {
@@ -34,9 +35,9 @@ export default function Hero() {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-6 lg:px-8 min-h-[412px] sm:min-h-[520px]">
+    <section className="max-w-7xl mx-auto px-6 lg:px-8 min-h-[412px] sm:min-h-[520px]">
       <div className="flex flex-col items-center ">
-        <section className="w-full min-h-[250px] sm:min-h-[370px] flex flex-col justify-center">
+        <article className="w-full min-h-[250px] sm:min-h-[370px] flex flex-col justify-center">
           <h1 className="tracking-tight text-5xl lg:text-6xl font-extrabold text-white my-1">
             Hey, I'm <span className="text-yellow-400">Hauke</span>
           </h1>
@@ -46,18 +47,18 @@ export default function Hero() {
           <p className="tracking-tight text-4xl lg:text-6xl font-extrabold text-white my-1">
             and <span className="text-rose-500">{phrase}</span>
           </p>
-        </section>
+        </article>
         <div className="mx-auto mt-6 self-end">
-          <Button
-            color={Button.color.ROSE}
-            size={Button.size.LARGE}
-            weight={Button.weight.EXTRABOLD}
+          <ButtonRFC
+            color={ButtonRFC.color.ROSE}
+            size={ButtonRFC.size.LARGE}
+            weight={ButtonRFC.weight.EXTRABOLD}
             handler={getRandomPhrase}
           >
-            more about me
-          </Button>
+            something else
+          </ButtonRFC>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

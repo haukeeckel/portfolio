@@ -1,30 +1,5 @@
-import { ReactNode } from 'react';
 import { classNames } from '../util/classNames';
-
-enum Color {
-  ROSE,
-  YELLOW,
-  GREEN,
-}
-
-enum Size {
-  LARGE,
-  SMALL,
-}
-
-enum Weight {
-  REGULAR,
-  BOLD,
-  EXTRABOLD,
-}
-
-type Props = {
-  color: Color;
-  size: Size;
-  weight: Weight;
-  handler: Function;
-  children?: ReactNode;
-};
+import { ButtonProps, Color, Size, Weight } from '../compiler/types';
 
 const COLOR_MAPS: Record<Color, string> = {
   [Color.ROSE]: `focus:ring-rose-500 bg-rose-500 hover:bg-rose-600`,
@@ -43,7 +18,7 @@ const WEIGHT_MAPS: Record<Weight, string> = {
   [Weight.EXTRABOLD]: 'font-extrabold',
 };
 
-export default function Button(props: Props) {
+export default function ButtonRFC(props: ButtonProps) {
   const { color, size, weight, handler, children } = props;
   return (
     <button
@@ -60,12 +35,12 @@ export default function Button(props: Props) {
   );
 }
 
-Button.defaultProps = {
+ButtonRFC.defaultProps = {
   variant: Color.ROSE,
   size: Size.SMALL,
   weight: Weight.REGULAR,
 };
 
-Button.color = Color;
-Button.size = Size;
-Button.weight = Weight;
+ButtonRFC.color = Color;
+ButtonRFC.size = Size;
+ButtonRFC.weight = Weight;
