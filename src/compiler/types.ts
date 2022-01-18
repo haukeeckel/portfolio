@@ -59,3 +59,12 @@ export interface Project {
   deployement: string;
   repository: string;
 }
+
+// Modal
+export interface ModalProps {
+  isOpen: boolean;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  project: Project;
+  index: number;
+  setIndex: React.Dispatch<React.SetStateAction<number>>;
+}

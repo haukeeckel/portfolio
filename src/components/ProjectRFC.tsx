@@ -1,9 +1,21 @@
+import { useState } from 'react';
 import { ProjectProps } from '../compiler/types';
+import ModalRFC from './ModalRFC';
 
 export default function ProjectRFC(props: ProjectProps) {
   const { project } = props;
+
+  const [open, setOpen] = useState(false);
+  const [index, setIndex] = useState(0);
+
+  function enlargeImage(selectedIndex: number) {
+    setIndex(selectedIndex);
+    setOpen(!open);
+  }
+
   return (
     <article className="max-w-4xl mx-auto my-12 p-4 grid grid-cols-1 lg:max-w-5xl lg:gap-x-20 lg:grid-cols-2">
+      <ModalRFC isOpen={open} setIsOpen={setOpen} project={project} index={index} setIndex={setIndex} />
       <div className="relative p-3 col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 sm:bg-none sm:row-start-2 sm:p-0 lg:row-start-1">
         <h3 className="mt-1 text-lg font-extrabold md:text-2xl">{project.title}</h3>
         <p className="text-sm leading-4 font-medium sm:text-slate-500">{project.type.toUpperCase()}</p>
@@ -12,18 +24,21 @@ export default function ProjectRFC(props: ProjectProps) {
         <img
           src={project.images[0]}
           alt=""
+          onClick={() => enlargeImage(0)}
           className="w-full h-60 object-cover rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full"
           loading="lazy"
         />
         <img
           src={project.images[1]}
           alt=""
+          onClick={() => enlargeImage(1)}
           className="hidden w-full h-52 object-cover rounded-lg sm:block sm:col-span-2 md:col-span-1 lg:row-start-2 lg:col-span-2 lg:h-32"
           loading="lazy"
         />
         <img
           src={project.images[2]}
           alt=""
+          onClick={() => enlargeImage(2)}
           className="hidden w-full h-52 object-cover rounded-lg md:block lg:row-start-2 lg:col-span-2 lg:h-32"
           loading="lazy"
         />
