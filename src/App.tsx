@@ -2,6 +2,7 @@ import Hero from './components/Hero';
 import Bio from './components/Bio';
 import Divider from './components/Divider';
 import Projects from './components/Projects';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -11,6 +12,8 @@ function App() {
       <Bio />
       <Divider />
       <Projects />
+      <Divider />
+      <Footer />
     </div>
   );
 }

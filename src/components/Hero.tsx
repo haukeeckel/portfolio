@@ -10,7 +10,7 @@ const randomPhrase: string[] = [
   "I'm working on my Website",
   'I love french fries 🍟',
   'I really like TailwindCSS',
-  "I'm live in Kiel, Germany",
+  "I'm living in Kiel, Germany",
   'I started coding in 2021',
 ];
 

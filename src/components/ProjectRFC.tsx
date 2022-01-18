@@ -17,7 +17,7 @@ export default function ProjectRFC(props: ProjectProps) {
     <article className="max-w-4xl mx-auto my-12 p-4 grid grid-cols-1 lg:max-w-5xl lg:gap-x-20 lg:grid-cols-2">
       <ModalRFC isOpen={open} setIsOpen={setOpen} project={project} index={index} setIndex={setIndex} />
       <div className="relative p-3 col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 sm:bg-none sm:row-start-2 sm:p-0 lg:row-start-1">
-        <h3 className="mt-1 text-lg font-extrabold md:text-2xl">{project.title}</h3>
+        <h3 className="mt-1 text-lg font-extrabold lg:text-2xl">{project.title}</h3>
         <p className="text-sm leading-4 font-medium sm:text-slate-500">{project.type.toUpperCase()}</p>
       </div>
       <div className="grid gap-4 col-start-1 col-end-3 row-start-1 sm:mb-6 sm:grid-cols-4 lg:gap-6 lg:col-start-2 lg:row-end-6 lg:row-span-6 lg:mb-0">
